@@ -4,4 +4,25 @@ This repositoy contains the data associated with the the development of the forc
 
 Reference_data.zip:
 
-In the Reference_data.zip folder you will find the reference training and test data used in the training and testing of the force correction model. The reference data files consist of the ion positions and corresponding KS and OF ionic forces for snapshots generated from OF-DFT driven molecular dynamic simulations. In total, there are 5 different reference data files. For each file the ion positions and corresponding forces were generated at the temperature given in the file name. Note, all simulations were performed on warm dense hydrogen at 1.0 g/cm^3.  
+In the Reference_data.zip folder you will find the reference training and test data used in the training and testing of the force correction model. 
+The reference data files consist of the ion positions and corresponding KS and OF ionic forces for snapshots generated from OF-DFT driven molecular dynamic 
+simulations. In total, there are 5 different reference data files. For each file the ion positions and corresponding forces were generated at the temperature given 
+in the file name. Note, all simulations were performed on warm dense hydrogen at 1.0 g/cm^3.  
+
+Trained_model.zip:
+
+In the Trained_model.zip folder you will find files containing the weights and bias of the trained neural network. The parameters for the model trained at each 
+temperature is in it own file which is labeled by the temperature at which the reference data was generated. In the Weights and Bias files you will find multiple 
+sets of free parameters. This is due to the fact that an ensemble of models have been trained at each temperature. 
+
+In the Weight files when the layer number is equal to 0 this indicates the rows below describe the weight matrix for the transfrom from the input layer to the hidden 
+layer. Layer number of 1 indicates the next rows describe the weight matrix in the transformation from the hidden layer to the output layer. When the layer number 
+resets this indicates a new member in the ensemble. Also note, these matrices have been written out by row. So each row and column in the data file correspondes to 
+the same row and column of the matrix.
+
+The Bias files are formated similarly to the Weight files with one exception. Here, the bisa vectors are first transposed then written to the file.
+
+
+For more details about the work please see the work associated with the link at the top of this document.
+
+
