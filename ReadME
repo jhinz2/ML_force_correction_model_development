@@ -1,1 +1,7 @@
+This repositoy contains the data associated with the the development of the force correction model used for warm dense matter simulations. This work can be found at the link below.
 
+[insert link here]
+
+Reference_data.zip:
+
+In the Reference_data.zip folder you will find the reference training and test data used in the training and testing of the force correction model. The reference data files consist of the ion positions and corresponding KS and OF ionic forces for snapshots generated from OF-DFT driven molecular dynamic simulations. In total, there are 5 different reference data files. For each file the ion positions and corresponding forces were generated at the temperature given in the file name. Note, all simulations were performed on warm dense hydrogen at 1.0 g/cm^3.  
